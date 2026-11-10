@@ -25,20 +25,20 @@ def play_jingle():
         brick.play_tone_and_wait(*note)
 
 def forward(degrees, speed=100):
-    move(degrees, -speed)
+    move(degrees, speed)
 
 def backward(degrees, speed=100):
-    move(degrees, speed)
+    move(degrees, -speed)
 
 def left_turn(degrees, speed=80):
 
     deg = int(degrees * ROTATIONS_PER_DEGREE)
-    turn(right, deg, -speed)
+    turn(right, deg, speed)
 
 def right_turn(degrees, speed=80):
 
     deg = int(degrees * ROTATIONS_PER_DEGREE)
-    turn(left, deg, -speed)
+    turn(left, deg, speed)
 
 def turn(motor, rots, speed):
 
@@ -74,5 +74,3 @@ if __name__ == "__main__":
     left_turn(100, 70)
     right_turn(100, 70)
     play_jingle()
-
-
